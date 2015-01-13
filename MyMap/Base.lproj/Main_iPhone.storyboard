@@ -68,6 +68,9 @@
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dyl-s4-caE">
                                 <rect key="frame" x="0.0" y="63" width="320" height="459"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="3mM-Jb-p3I"/>
+                                </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dj-gh-QCH">
                                 <rect key="frame" x="98" y="530" width="125" height="30"/>

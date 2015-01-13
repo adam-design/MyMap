@@ -7,7 +7,6 @@
 
 #import "MMViewController.h"
 #import "MMDataPoint.h"
-#import "MMTraceView.h"
 
 @interface MMViewController ()
 
@@ -85,17 +84,7 @@
     // draw the actual lines between points
     [self drawLines:self];
     
-//    // draw the trail so far on our mapview
-//    [_trail drawMap:_mapView withView:self.view];
-    
-//    // update the points and mapview references
-//    ((MMTraceView*)self.view).mapView = _mapView;
-//    ((MMTraceView*)self.view).points = _trail.points;
-    
-//    // tell the view to update
-//    [self.view setNeedsDisplay];
-//    
-//    // print the trail so far
+    // print the trail so far
     NSLog(@"NEW TRAIL");
     NSLog(@"%@", [_trail toTSV]);
     NSLog(@"\n");
@@ -136,8 +125,6 @@
     self.lineView.strokeColor = [UIColor redColor];
     self.lineView.lineWidth = 5;
     
-    // for a laugh: how many polylines are we drawing here?
-//    self.title = [[NSString alloc]initWithFormat:@"%lu", (unsigned long)self.mapView.overlays.count];
     
 }
 

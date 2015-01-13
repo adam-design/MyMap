@@ -48,30 +48,4 @@
     return tsvText;
 }
 
-    
-//    // create a new map region
-//    MKCoordinateRegion mapRegion;
-//
-//    // set the long and lat of the map region
-//    mapRegion.center.longitude = location.coordinate.longitude;
-//    mapRegion.center.latitude = location.coordinate.latitude;
-//
-//    // print out the coordinates to the console
-//    NSLog(@"Location: %f, %f", location.coordinate.longitude, location.coordinate.latitude);
-//
-//    // se the default zoom levels
-//    mapRegion.span.latitudeDelta = 0.03;
-//    mapRegion.span.longitudeDelta = 0.03;
-//
-//    // tween to the current position and animate it
-//    [mapView setRegion:mapRegion animated: YES];
-//
-//    // create an annotation for this position
-//    MKPointAnnotation *ant = [[MKPointAnnotation alloc] init];
-//    [ant setCoordinate:location.coordinate];
-//    [ant setTitle:@"You are Here!"];
-//
-//    // add the annotation to the map view
-//    [mapView addAnnotation:ant];
-
 @end
