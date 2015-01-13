@@ -24,6 +24,9 @@
 		9C5F170F1A63C26F005230D1 /* MyMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F170E1A63C26F005230D1 /* MyMapTests.m */; };
 		9C5F17191A63C5F2005230D1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5F17181A63C5F2005230D1 /* MapKit.framework */; };
 		9C5F171B1A63C82C005230D1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5F171A1A63C82C005230D1 /* CoreLocation.framework */; };
+		9CBA572D1A6420CD00AFC670 /* MMMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA572C1A6420CD00AFC670 /* MMMainViewController.m */; };
+		9CBA57301A64322400AFC670 /* MMTrail.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA572F1A64322400AFC670 /* MMTrail.m */; };
+		9CBA57331A6432F000AFC670 /* MMDataPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA57321A6432F000AFC670 /* MMDataPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,12 @@
 		9C5F170E1A63C26F005230D1 /* MyMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyMapTests.m; sourceTree = "<group>"; };
 		9C5F17181A63C5F2005230D1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9C5F171A1A63C82C005230D1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9CBA572B1A6420CD00AFC670 /* MMMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMainViewController.h; sourceTree = "<group>"; };
+		9CBA572C1A6420CD00AFC670 /* MMMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMainViewController.m; sourceTree = "<group>"; };
+		9CBA572E1A64322400AFC670 /* MMTrail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTrail.h; sourceTree = "<group>"; };
+		9CBA572F1A64322400AFC670 /* MMTrail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTrail.m; sourceTree = "<group>"; };
+		9CBA57311A6432F000AFC670 /* MMDataPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDataPoint.h; sourceTree = "<group>"; };
+		9CBA57321A6432F000AFC670 /* MMDataPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDataPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +139,12 @@
 				9C5F16F91A63C26E005230D1 /* MMViewController.m */,
 				9C5F16FB1A63C26E005230D1 /* Images.xcassets */,
 				9C5F16E71A63C26D005230D1 /* Supporting Files */,
+				9CBA572B1A6420CD00AFC670 /* MMMainViewController.h */,
+				9CBA572C1A6420CD00AFC670 /* MMMainViewController.m */,
+				9CBA572E1A64322400AFC670 /* MMTrail.h */,
+				9CBA572F1A64322400AFC670 /* MMTrail.m */,
+				9CBA57311A6432F000AFC670 /* MMDataPoint.h */,
+				9CBA57321A6432F000AFC670 /* MMDataPoint.m */,
 			);
 			path = MyMap;
 			sourceTree = "<group>";
@@ -265,6 +280,9 @@
 				9C5F16F11A63C26E005230D1 /* MMAppDelegate.m in Sources */,
 				9C5F16FA1A63C26E005230D1 /* MMViewController.m in Sources */,
 				9C5F16ED1A63C26E005230D1 /* main.m in Sources */,
+				9CBA572D1A6420CD00AFC670 /* MMMainViewController.m in Sources */,
+				9CBA57331A6432F000AFC670 /* MMDataPoint.m in Sources */,
+				9CBA57301A64322400AFC670 /* MMTrail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +497,7 @@
 				9C5F17141A63C270005230D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C5F17151A63C270005230D1 /* Build configuration list for PBXNativeTarget "MyMapTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +506,7 @@
 				9C5F17171A63C270005230D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
