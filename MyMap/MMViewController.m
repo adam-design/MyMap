@@ -81,6 +81,9 @@
     // add this point to the trail object
     [_trail addPoint:pt];
     
+    // zoom to the proper dimensions for the current path
+    [self zoomPath];
+    
     // draw the actual lines between points
     [self drawLines:self];
     
@@ -126,6 +129,36 @@
     self.lineView.lineWidth = 5;
     
     
+}
+
+- (void) zoomPath
+{
+    // determine the extents of the trip points that were passed in, and zoom in to that area.
+    CLLocationDegrees maxLat = -90;
+    CLLocationDegrees maxLon = -180;
+    CLLocationDegrees minLat = 90;
+    CLLocationDegrees minLon = 180;
+    
+    for(int idx = 0; idx < _trail.points.count; idx++)
+    {
+        CLLocation* currentLocation = [_trail.points objectAtIndex:idx];
+        if(currentLocation.coordinate.latitude > maxLat)
+            maxLat = currentLocation.coordinate.latitude;
+        if(currentLocation.coordinate.latitude < minLat)
+            minLat = currentLocation.coordinate.latitude;
+        if(currentLocation.coordinate.longitude > maxLon)
+            maxLon = currentLocation.coordinate.longitude;
+        if(currentLocation.coordinate.longitude < minLon)
+            minLon = currentLocation.coordinate.longitude;
+    }
+    
+    MKCoordinateRegion region;
+    region.center.latitude = (maxLat + minLat) / 2;
+    region.center.longitude = (maxLon + minLon) / 2;
+    region.span.latitudeDelta = maxLat - minLat;
+    region.span.longitudeDelta = maxLon - minLon;
+    
+    [self.mapView setRegion:region];
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay {
