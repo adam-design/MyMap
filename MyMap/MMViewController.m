@@ -29,7 +29,7 @@
     self.locationManager.delegate = self;
     
     // create a distance filter to reduce noise from staying in one place
-    self.locationManager.distanceFilter = 10.0f;
+    self.locationManager.distanceFilter = 20.0f;
     
     // Check for iOS 8. Without this guard the code will crash with "unknown selector" on iOS 7.
     if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
@@ -155,8 +155,8 @@
     MKCoordinateRegion region;
     region.center.latitude = (maxLat + minLat) / 2;
     region.center.longitude = (maxLon + minLon) / 2;
-    region.span.latitudeDelta = maxLat - minLat;
-    region.span.longitudeDelta = maxLon - minLon;
+    region.span.latitudeDelta = (maxLat - minLat) * 1.2;
+    region.span.longitudeDelta = (maxLon - minLon) * 1.2;
     
     [self.mapView setRegion:region];
 }

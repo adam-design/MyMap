@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C3A968B1A66C90E00812436 /* Trails.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C3A96891A66C90E00812436 /* Trails.xcdatamodeld */; };
 		9C5F16E11A63C26D005230D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5F16E01A63C26D005230D1 /* Foundation.framework */; };
 		9C5F16E31A63C26D005230D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5F16E21A63C26D005230D1 /* CoreGraphics.framework */; };
 		9C5F16E51A63C26D005230D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5F16E41A63C26D005230D1 /* UIKit.framework */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C3A968A1A66C90E00812436 /* Trails.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Trails.xcdatamodel; sourceTree = "<group>"; };
 		9C5F16DD1A63C26D005230D1 /* MyMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5F16E01A63C26D005230D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C5F16E21A63C26D005230D1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,6 +101,7 @@
 		9C5F16D41A63C26D005230D1 = {
 			isa = PBXGroup;
 			children = (
+				9C3A96891A66C90E00812436 /* Trails.xcdatamodeld */,
 				9C5F16E61A63C26D005230D1 /* MyMap */,
 				9C5F17081A63C26F005230D1 /* MyMapTests */,
 				9C5F16DF1A63C26D005230D1 /* Frameworks */,
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C3A968B1A66C90E00812436 /* Trails.xcdatamodeld in Sources */,
 				9C5F16F11A63C26E005230D1 /* MMAppDelegate.m in Sources */,
 				9C5F16FA1A63C26E005230D1 /* MMViewController.m in Sources */,
 				9C5F16ED1A63C26E005230D1 /* main.m in Sources */,
@@ -511,6 +515,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9C3A96891A66C90E00812436 /* Trails.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9C3A968A1A66C90E00812436 /* Trails.xcdatamodel */,
+			);
+			currentVersion = 9C3A968A1A66C90E00812436 /* Trails.xcdatamodel */;
+			path = Trails.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9C5F16D51A63C26D005230D1 /* Project object */;
 }
