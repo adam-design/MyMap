@@ -6,10 +6,12 @@
 //  Copyright (c) 2015 ___FULLUSERNAME___. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "MMTrail.h"
+#import "MMAppDelegate.h"
 
 @interface MMViewController : UIViewController<CLLocationManagerDelegate, MKMapViewDelegate>
 @property MMTrail * trail;

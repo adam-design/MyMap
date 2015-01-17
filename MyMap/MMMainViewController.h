@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import "MMAppDelegate.h"
 
 @interface MMMainViewController : UIViewController
 

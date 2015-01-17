@@ -14,6 +14,15 @@
 
 @implementation MMViewController
 
+- (NSManagedObjectContext *)managedObjectContext
+{
+    // Code for CoreData
+    NSManagedObjectContext *context = nil;
+    MMAppDelegate *appDelegate = (MMAppDelegate *)[[UIApplication sharedApplication]delegate];
+    context = [appDelegate managedObjectContext];
+    return context;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -38,7 +47,52 @@
         [self.locationManager requestAlwaysAuthorization];
     }
 
+}
+
+- (IBAction)save:(id)sender
+{
+    // Code for saving the trail data to the database
     
+    NSManagedObjectContext* context = [self managedObjectContext];
+    
+    // Create a new managed object
+    NSManagedObject* newTrail = [NSEntityDescription insertNewObjectForEntityForName:@"Trail" inManagedObjectContext:context];
+    
+    // set the date to the last point's date
+    [newTrail setValue:((MMDataPoint*)[_trail.points lastObject]).date forKey:@"date"];
+    
+    // set the name of the trail TODO: prompt the user and load old name
+    [newTrail setValue:@"New Trail X" forKey:@"name"];
+    
+    // create an ordered set to store the pins in
+    NSMutableOrderedSet* orderedSet = [[NSMutableOrderedSet alloc] init];
+    
+    // bundle the points data into managed objects
+    for (MMDataPoint* dp in _trail.points)
+    {
+        // create a new managed object
+        NSManagedObject* curPoint = [NSEntityDescription insertNewObjectForEntityForName:@"Pin" inManagedObjectContext:context];
+        
+        // set the properties about the point to its object in the database
+        [curPoint setValue:dp.title forKey:@"name"];
+        [curPoint setValue:dp.date forKey:@"date"];
+        [curPoint setValue: [[NSNumber alloc] initWithDouble:dp.coordinate.latitude] forKey:@"lat"];
+        [curPoint setValue: [[NSNumber alloc] initWithDouble:dp.coordinate.longitude] forKey:@"long"];
+        
+        // add this object to the ordered set
+        [orderedSet addObject: curPoint];
+    }
+    
+    // make a relationship to this ordered set with the trail
+    [newTrail setValue:orderedSet forKey:@"has"];
+    
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+    
+//    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
